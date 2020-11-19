@@ -30,9 +30,9 @@ steps:
   displayName: 'Compile Sass assets'
 
 - task: gulp@1
-  displaName: 'Run gulp tasks'
+  displayName: 'Run gulp tasks'
 
-- task: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
+- script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
   displaName: 'Write build info'
   workingDirectory: TailSpin.SpaceGame.Web/wwwroot
 
